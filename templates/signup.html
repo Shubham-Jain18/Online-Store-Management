@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'sign up style.css' %}" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="box-form">
+      <div class="left">
+        <div class="overlay">
+          <h1>Tech Mart</h1>
+          <!-- name to be given -->
+          <p>
+            Welcome to our platform! You need to login before you can shop your
+            favourite gadgets from us.
+          </p>
+          <span>
+            <p>Sign up with social media</p>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </span>
+        </div>
+      </div>
+
+      <div class="right">
+        <form method="post",action="signup.html">
+          {% csrf_token %}
+        <h5>Sign up</h5>
+        <p>Already have an account? <a href="{% url 'login' %}">Sign in</a></p>
+        <div class="inputs">
+          <input type="text" placeholder="Full Name",name="FULL Name" />
+          <br />
+          <input type="text" placeholder="User Name",name="username" />
+          <br />
+          <input type="email" placeholder="Email",name="email" />
+          <br />
+          <input type="text" placeholder="Phone Number" ,name="Phone Number"/>
+          <br />
+          <input type="text" placeholder="Address" ,name="address"/>
+          <br />
+          <input type="password" placeholder=" Password",name="password1" />
+          <br />
+          <input type="password" placeholder="Confirm Password",name="password2" />
+          <br />
+          <input type="text" placeholder=" security key to recover password",name="key" />
+          <br />
+        </div>
+
+        <br /><br />
+
+        
+      
+
+        <br />
+        <button type=submit>Create Account</button>
+      </form>
+      </div>
+    </div>
+    <!-- partial -->
+  </body>
+</html>
