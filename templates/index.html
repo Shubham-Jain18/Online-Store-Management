@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700|Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-+qUc1WPUB8t5CwKBUqF0+2Q1Z2i1evxAuST+Hl6BdBBG2I+fPBbvW8ZRlV1cJZ5pmwAWqUxjqgdwBxWiKegxFw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Electronics Store</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="Assets\36027247.jpg"
+              id="logo_img"
+              alt="Logo"
+              class="logo"
+            />
+          </a>
+          <span class="navbar-text"> Tech-Hub </span>
+
+          <form class="d-flex mx-auto">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <div class="navbar-nav">
+            <div class="account-dropdown">
+              <a class="nav-link account-link" href="#">
+                <i class="bi bi-person"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="#">Sign In <i class="bi bi-box-arrow-in-right"></i></a
+                ><br />
+                <a href="#">Log In <i class="bi bi-box-arrow-in-left"></i></a>
+              </div>
+            </div>
+            <a class="nav-link wishlist-link" href="#">
+              <i class="bi-heart"></i>
+            </a>
+            <a class="nav-link cart-link" href="#">
+              <i class="bi-cart"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- <section class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <h1 class="display-1">Explore the Latest Electronics</h2>
+            <p class="lead">
+              Discover cutting-edge technology and gadgets at your fingertips.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Add this section above the Shop by Deals section -->
+    <section class="sliding-section">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner" id="carousel_inner">
+          <div class="carousel-item active" id="carousel_item">
+            <img
+              src="Assets\38065859.jpg"
+              class="d-block w-100"
+              alt="Slide 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="Assets\38873775.jpg"
+              class="d-block w-100"
+              id="carousel_item_image"
+              alt="Slide 2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="Assets\41599299.jpg"
+              class="d-block w-100"
+              alt="Slide 3"
+            />
+          </div>
+          <!-- Add more carousel items as needed -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Update the Shop by Deals section with a collage effect -->
+    <section class="deals collage">
+      <div class="container">
+        <h2 class="section-title text-center">Shop by Deals</h2>
+        <div class="row">
+          <!-- Deal 1 -->
+          <div class="col-md-4">
+            <a href="#">
+              <div class="card">
+                <img
+                  src="Assets\10063336.jpg"
+                  class="card-img-top"
+                  alt="Deal 1"
+                />
+                <div class="overlay overlay-effect"></div>
+              </div>
+            </a>
+          </div>
+          <!-- Deal 2 -->
+          <div class="col-md-8">
+            <a href="#">
+              <div class="card">
+                <img
+                  src="Assets\37271450.jpg"
+                  class="card-img-top"
+                  alt="Deal 2"
+                />
+                <div class="overlay overlay-effect"></div>
+              </div>
+            </a>
+          </div>
+          <!-- Deal 3 -->
+          <div class="col-md-8">
+            <a href="#">
+              <div class="card">
+                <img
+                  src="Assets\14299324.jpg"
+                  class="card-img-top"
+                  alt="Deal 3"
+                />
+                <div class="overlay overlay-effect"></div>
+              </div>
+            </a>
+          </div>
+          <!-- Deal 4 -->
+          <div class="col-md-4">
+            <a href="#">
+              <div class="card">
+                <img
+                  src="Assets\sale-50-percent-off-discount-vector-2519688.jpg"
+                  class="card-img-top"
+                  alt="Deal 4"
+                />
+                <div class="overlay overlay-effect"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trending">
+      <div class="container">
+        <h2 class="section-title">Trending Now</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="Assets\pexels-garrett-morrow-1649771.jpg"
+                class="card-img-top"
+                alt="Trending 1"
+              />
+
+              <div class="card-body">
+                <h5 class="card-title">Trending Product 1</h5>
+                <p class="card-text">
+                  Discover the latest and greatest in tech.
+                </p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="Assets\pexels-mavio-silva-1561081.jpg"
+                class="card-img-top"
+                alt="Trending 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trending Product 2</h5>
+                <p class="card-text">
+                  Stay ahead with our top picks of the week.
+                </p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="Assets\pexels-pnw-production-8490075.jpg"
+                class="card-img-top"
+                alt="Trending 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trending Product 3</h5>
+                <p class="card-text">
+                  Don't miss out on the hottest gadgets in town.
+                </p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured">
+      <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="Assets\jens-kreuter-ngMtsE5r9eI-unsplash.jpg"
+                class="card-img-top"
+                alt="Featured 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Featured Product 1</h5>
+                <p class="card-text">
+                  Experience the future with our top-selling item.
+                </p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="Assets\pexels-karina-zhukovskaya-6446709.jpg"
+                class="card-img-top"
+                alt="Featured 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Featured Product 2</h5>
+                <p class="card-text">Unleash the power of technology.</p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="Assets\pexels-антон-леонардович-варфоломеев-9767549.jpg"
+                class="card-img-top"
+                alt="Featured 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Featured Product 3</h5>
+                <p class="card-text">
+                  Upgrade your lifestyle with our featured collection.
+                </p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-arrivals">
+      <div class="container">
+        <h2 class="section-title">New Arrivals</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="Assets\pexels-soulful-pizza-3780681.jpg"
+                class="card-img-top"
+                alt="New Arrival 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">New Arrival 1</h5>
+                <p class="card-text">
+                  Stay ahead with the latest in electronics.
+                </p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="Assets\pexels-cottonbro-studio-3945659.jpg"
+                class="card-img-top"
+                alt="New Arrival 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">New Arrival 2</h5>
+                <p class="card-text">
+                  Upgrade to the newest technology in the market.
+                </p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="Assets\pexels-sound-on-3761263.jpg"
+                class="card-img-top"
+                alt="New Arrival 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">New Arrival 3</h5>
+                <p class="card-text">
+                  Experience innovation like never before.
+                </p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Customer Testimonials</h2>
+        <div
+          id="carouselMultiItemExample"
+          class="carousel slide carousel-dark text-center"
+          data-bs-ride="carousel"
+        >
+          <!-- Inner -->
+          <div class="carousel-inner py-4">
+            <!-- Testimonial 1 -->
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img
+                      class="shadow-1-strong mb-4"
+                      src="Assets\pexels-pixabay-220453.jpg"
+                      alt="avatar"
+                      id="testimonial_"
+                      style="width: 150px"
+                    />
+                    <h5 class="mb-3">Tech Geek</h5>
+                    <p>Gadget Enthusiast</p>
+                    <p class="text-muted">
+                      <i class="fas fa-quote-left pe-2"></i>
+                      As a tech geek, I can't get enough of the amazing products
+                      from Electronics Hub. The latest gadgets at unbeatable
+                      prices! Highly recommended.
+                    </p>
+                    <ul
+                      class="list-unstyled d-flex justify-content-center text-warning mb-0"
+                    >
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                    </ul>
+                  </div>
+                  <!-- Repeat the structure for other testimonials -->
+
+                  <!-- Testimonial 2 -->
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <img
+                      class="shadow-1-strong mb-4"
+                      src="Assets\pexels-andrea-piacquadio-774909.jpg"
+                      alt="avatar"
+                      id="testimonial_"
+                      style="width: 150px"
+                    />
+                    <h5 class="mb-3">Eva Electronics</h5>
+                    <p>Founder, Smart Devices Co.</p>
+                    <p class="text-muted">
+                      <i class="fas fa-quote-left pe-2"></i>
+                      Electronics Hub is our go-to supplier for cutting-edge
+                      components. Exceptional quality and prompt delivery every
+                      time!
+                    </p>
+                    <ul
+                      class="list-unstyled d-flex justify-content-center text-warning mb-0"
+                    >
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                    </ul>
+                  </div>
+
+                  <!-- Testimonial 3 -->
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <img
+                      class="shadow-1-strong mb-4"
+                      src="Assets\pexels-creation-hill-1681010.jpg"
+                      alt="avatar"
+                      id="testimonial_"
+                      style="width: 150px"
+                    />
+                    <h5 class="mb-3">Sophie Developer</h5>
+                    <p>Software Engineer</p>
+                    <p class="text-muted">
+                      <i class="fas fa-quote-left pe-2"></i>
+                      Electronics Hub has a fantastic collection of software and
+                      development tools. Perfect for developers like me who are
+                      always looking for the latest tech.
+                    </p>
+                    <ul
+                      class="list-unstyled d-flex justify-content-center text-warning mb-0"
+                    >
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="footer-title">Electronics Hub</h3>
+            <p class="footer-text">
+              Your one-stop destination for the latest in electronics and
+              technology.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h3 class="footer-title">Contact Us</h3>
+            <p class="footer-text">
+              Email: info@electronicshub.com<br />Phone: +123 456 789
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
