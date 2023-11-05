@@ -55,3 +55,19 @@ def LoginPage(request):
 def LogoutPage(request):
     logout(request)
     return redirect('login')
+
+def ProductView(request, id):
+    # fetch the product using id
+    product = Products.objects.filter(product_id=id)
+    category = product[0].category
+    price = product[0].price
+    discount = product[0].discount
+    mrp = int(price) // (1 - (int(discount) / 100))
+
+    CatProds = Products.objects.filter(category=category).exclude(product_id=id)
+    n = len(CatProds)
+    nSlides = n // 3 + ceil((n / 3) - (n // 3))
+
+    return render(request, 'shop/product.html',
+                  {'product': product[0], 'CatProds': CatProds, 'no_of_slides': nSlides, 'range': range(1, nSlides),
+                   'mrp': mrp}, )
